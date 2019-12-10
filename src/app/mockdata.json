@@ -1,0 +1,90 @@
+{
+  "search": [
+    {
+      "id": "attestatie-05",
+      "data": [
+        {
+          "preview": false,
+          "offset": 0,
+          "result": {
+            "_time": "2019-11-27 00:00:00.000 CET",
+            "Disabled users": "3",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 1,
+          "result": {
+            "_time": "2019-11-28 00:00:00.000 CET",
+            "Disabled users": "42",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 2,
+          "result": {
+            "_time": "2019-11-29 00:00:00.000 CET",
+            "Disabled users": "77",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 3,
+          "result": {
+            "_time": "2019-11-30 00:00:00.000 CET",
+            "Disabled users": "55",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 4,
+          "result": {
+            "_time": "2019-12-01 00:00:00.000 CET",
+            "Disabled users": "297",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 5,
+          "result": {
+            "_time": "2019-12-02 00:00:00.000 CET",
+            "Disabled users": "18",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 6,
+          "result": {
+            "_time": "2019-12-03 00:00:00.000 CET",
+            "Disabled users": "106",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        },
+        {
+          "preview": false,
+          "offset": 7,
+          "lastrow": true,
+          "result": {
+            "_time": "2019-12-04 00:00:00.000 CET",
+            "Disabled users": "15",
+            "_span": "86400",
+            "_spandays": "1"
+          }
+        }
+      ]
+    }
+  ]
+}
