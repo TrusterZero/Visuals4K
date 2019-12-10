@@ -1,5 +1,5 @@
 <div class="container">
   <mat-card id="chartHolder">
-
+<chart *ngIf="labels" chartType="line" [dataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
   </mat-card>
 </div>
