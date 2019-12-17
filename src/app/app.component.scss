@@ -1,13 +1,40 @@
 
+.navbar {
+  justify-content: space-between;
+  user-select: none;
+  span {
+    padding: 1rem;
+
+  }
+  span:hover {
+    background-color: rgba(0,0,0,0.2) ;
+  }
+
+}
 
 .container {
   display: flex;
   justify-content: center;
   margin: 5% auto;
 }
-#chartHolder {
+.chartHolder {
   background-color: #FCFCFC;
   width: 90%;
   height: 50%;
 }
+
+app-status {
+  position: absolute;
+  right: 30px;
+}
+
+app-message-holder {
+  position: absolute;
+  width: 50%;
+  top: 100px;
+  right: -600px;
+}
+
+
+
 

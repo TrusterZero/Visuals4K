@@ -1,8 +1,7 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Chart} from 'chart.js';
-import {DataService} from "../data.service";
 
-export interface DataSet {
+export interface ChartData {
   data: string[];
   borderColor: string;
   fill: boolean;
@@ -17,7 +16,7 @@ export interface DataSet {
 
 export class ChartComponent implements OnInit {
   @Input() chartType: string;
-  @Input() dataSets: DataSet[];
+  @Input() chartDataSets: ChartData[];
   @Input() labels: string[];
   @Input() data: any;
 
@@ -25,6 +24,7 @@ export class ChartComponent implements OnInit {
   @ViewChild('canvas', {static: false}) canvas: ElementRef;
 
   constructor() {
+
   }
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class ChartComponent implements OnInit {
       type: this.chartType,
       data: {
         labels: this.labels,
-        datasets: this.dataSets
+        datasets: this.chartDataSets
       },
       options: {
         legend: {
@@ -51,8 +51,14 @@ export class ChartComponent implements OnInit {
             display: true
           }],
         },
-        options: {
-          responsive: true
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0
+          }
         }
       }
     });

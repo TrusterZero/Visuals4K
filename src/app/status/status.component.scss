@@ -1,0 +1,18 @@
+#light {
+  transform: scale(1.2);
+  border: solid 12.5px;
+  filter: blur(3px);
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  border-color: green;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {filter: blur(3px);}
+  50% {filter: blur(4px);}
+  100% {filter: blur(3px);}
+}

@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {DataService} from './data.service';
-import {DataSet} from './chart/chart.component';
+import {DataService, DataSet} from './data.service';
+import {ChartData} from './chart/chart.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {interval} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,11 @@ export class AppComponent {
 
 
 
-  constructor(private dataService: DataService, private snackBar: MatSnackBar) {
+  constructor(private dataService: DataService) {
 
-    this.snackBar.open('Some random message!', 'close');
 
+    this.dataService.data.subscribe((dataSet: DataSet) => {
+    });
     this.dataService.eventsPerDay('assestatie-05').then((eventsPerDay) => {
       this.assestatie05EventsPerDay = eventsPerDay;
       this.labels = Object.keys(eventsPerDay);
@@ -26,10 +28,10 @@ export class AppComponent {
   }
 
   generateDataSets(data: {}) {
-    const dataSets: DataSet[] = [];
+    const dataSets: ChartData[] = [];
     dataSets.push({
       borderColor: 'green',
-      fill: true,
+      fill: false,
       data: Object.values(data),
       label: 'Login attempts'
     });

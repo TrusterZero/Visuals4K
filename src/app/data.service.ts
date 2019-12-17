@@ -1,13 +1,22 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Subject, timer} from 'rxjs';
+import {interval, Subject, timer} from 'rxjs';
 import * as mockdata from './mockdata.json';
 
+export interface DataSet {
+  searches: SearchObject[];
+  messages: Message[];
+}
 
 interface SearchObject {
   id: string;
   data: any[];
 }
 
+export interface Message {
+  searchId: string;
+  messageId: string;
+  message: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +24,20 @@ interface SearchObject {
 
 export class DataService {
 
-  data: Subject<any[]> = new Subject<any[]>();
+  data: Subject<DataSet> = new Subject<DataSet>();
 
   constructor() {
     this.startPolling();
   }
 
   refreshData() {
-    this.data.next(mockdata.result);
+    const dataSet: DataSet = mockdata.dataSet;
+    this.data.next(dataSet);
+
   }
 
   private startPolling() {
-    const poll = timer(5).subscribe(() => {
+    const poll = timer(5000).subscribe(() => {
       this.refreshData();
       this.startPolling();
     });
@@ -37,8 +48,8 @@ export class DataService {
       const unsortedEventsPerDay: any = {};
       const sortedEventsPerDay: any = {};
 
-      this.data.subscribe((data: SearchObject[]) => {
-        for (const result of data) {
+      this.data.subscribe((data: DataSet) => {
+        for (const result of data.searches) {
           if (result.id === id) {
             result.data.forEach((event) => {
               if (event.result._time) {
@@ -50,7 +61,7 @@ export class DataService {
                 }
               }
             });
-            Object.keys(unsortedEventsPerDay).sort().forEach( (key) => {
+            Object.keys(unsortedEventsPerDay).sort().forEach((key) => {
               sortedEventsPerDay[key] = unsortedEventsPerDay[key];
             });
             resolve(sortedEventsPerDay);
@@ -60,4 +71,6 @@ export class DataService {
       });
     });
   }
+
+
 }
