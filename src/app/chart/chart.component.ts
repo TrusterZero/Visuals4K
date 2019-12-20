@@ -1,5 +1,6 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Chart} from 'chart.js';
+import * as uuid from 'uuid/v1';
 
 export interface ChartData {
   data: string[];
@@ -14,11 +15,12 @@ export interface ChartData {
   styleUrls: ['./chart.component.scss']
 })
 
-export class ChartComponent implements OnInit {
+export class ChartComponent implements AfterViewInit {
   @Input() chartType: string;
   @Input() chartDataSets: ChartData[];
   @Input() labels: string[];
   @Input() data: any;
+  canvasId = uuid();
 
   chart: Chart;
   @ViewChild('canvas', {static: false}) canvas: ElementRef;
@@ -27,13 +29,13 @@ export class ChartComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-    this.fillChart();
+  ngAfterViewInit() {
+    Promise.resolve(null).then(() =>  this.fillChart());
   }
 
 
   private fillChart() {
-    this.chart = new Chart('canvas', {
+    this.chart = new Chart(this.canvasId, {
       type: this.chartType,
       data: {
         labels: this.labels,
