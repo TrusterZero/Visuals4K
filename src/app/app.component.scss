@@ -17,6 +17,12 @@
   justify-content: center;
   margin: 5% auto;
 }
+
+.tab {
+  display: flex;
+  flex-direction: row;
+}
+
 .chartHolder {
   background-color: #FCFCFC;
   width: 90%;
@@ -28,12 +34,6 @@ app-status {
   right: 30px;
 }
 
-app-message-holder {
-  position: absolute;
-  width: 50%;
-  top: 100px;
-  right: -600px;
-}
 
 
 

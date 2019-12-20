@@ -11,7 +11,6 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { MessageHolderComponent } from './message-holder/message-holder.component';
 import { MessageComponent } from './message/message.component';
 import {MatTabsModule} from '@angular/material';
-import { Chart2Component } from './chart2/chart2.component';
 import { StatusComponent } from './status/status.component';
 
 @NgModule({
@@ -20,8 +19,6 @@ import { StatusComponent } from './status/status.component';
     ChartComponent,
     MessageHolderComponent,
     MessageComponent,
-    Chart2Component,
-    Chart2Component,
     StatusComponent,
   ],
   imports: [
