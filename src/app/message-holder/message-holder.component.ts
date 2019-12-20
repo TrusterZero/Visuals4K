@@ -29,7 +29,7 @@ export class MessageHolderComponent implements OnInit {
 
   private addRandomMessages() {
 
-    if (this.messages.length > 5) {
+    if (this.messages.length > 10) {
       this.messages = [];
     }
     this.messages.push(this.generateRandomMessage());
@@ -37,7 +37,7 @@ export class MessageHolderComponent implements OnInit {
 
   private generateRandomMessage(): Message {
     const array: string[] = ['test', 'assestatie-05'];
-    const marray: string[] = ['Alert!', 'Random text', 'This is a test message', 'Something went Wrong!', 'Oh oh!!'];
+    const marray: string[] = ['Alert!', 'Oops?!? \ud83d\ude14', 'Boom! \ud83d\ude21', 'Random text \t\ud83d\ude09', 'This is a test message \ud83d\ude10', 'Something went Wrong! \ud83d\ude2e', 'Oh oh!! \ud83d\ude36'];
     const text = marray[Math.floor(Math.random() * marray.length)];
     const message = {
       messageId: '0',
