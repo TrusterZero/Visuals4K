@@ -1,3 +1,8 @@
-#container {
-  width: 70%;
+.container {
+
+  min-height: 100%;
+}
+canvas {
+  width: 100%;
+  max-height: 100%;
 }

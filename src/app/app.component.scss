@@ -13,20 +13,36 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  margin: 5% auto;
+  display: grid;
+  margin: 0 auto;
+  width: 95vw;
+  height: 90vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 45vh 45vh;
+  grid-row-gap: 1vw;
+  grid-column-gap: 1vh;
 }
 
 .tab {
-  display: flex;
-  flex-direction: row;
+  overflow: -moz-scrollbars-none;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 80%;
+
+  .chart{
+
+  }
+
+  .messageHolder {
+
+  }
 }
+
+
 
 .chartHolder {
   background-color: #FCFCFC;
   width: 90%;
-  height: 50%;
 }
 
 app-status {

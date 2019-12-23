@@ -1,7 +1,7 @@
 <mat-toolbar class="navbar" color="primary">
- <div>
-   4K
- </div>
+  <div>
+    4K
+  </div>
   <div>
     <span>Home</span>
     <span>Settings</span>
@@ -9,33 +9,110 @@
   </div>
 </mat-toolbar>
 <div class="container">
-  <mat-card class="chartHolder">
-    <app-status></app-status>
-    <mat-tab-group animationDuration="1500ms">
-      <mat-tab label="assestatie-05" >
-        <ng-template matTabContent>
-          <div class="tab">
-        <div class="ch">
+  <!--  <mat-card class="chartHolder">-->
+  <app-status></app-status>
+  <mat-tab-group animationDuration="1500ms">
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
           <chart class="chart" *ngIf="labels" chartType="line"
                  [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
-        </div>
-        <div>
-          <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
-        </div>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
           </div>
-        </ng-template>
-      </mat-tab>
-      <mat-tab label="assestatie-05" class="tab">
-                <ng-template matTabContent>
-        <div class="ch">
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
           <chart class="chart" *ngIf="labels" chartType="line"
                  [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
         </div>
-        <div>
-          <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  <!--  </mat-card>-->
+  <!--  <mat-card class="chartHolder">-->
+  <app-status></app-status>
+  <mat-tab-group animationDuration="1500ms">
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
         </div>
-                </ng-template>
-      </mat-tab>
-    </mat-tab-group>
-  </mat-card>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  <!--  </mat-card>--> <!--  <mat-card class="chartHolder">-->
+  <app-status></app-status>
+  <mat-tab-group animationDuration="1500ms">
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  <!--  </mat-card>--> <!--  <mat-card class="chartHolder">-->
+  <app-status></app-status>
+  <mat-tab-group animationDuration="1500ms">
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="assestatie-05">
+      <ng-template matTabContent>
+        <div class="tab">
+          <chart class="chart" *ngIf="labels" chartType="line"
+                 [chartDataSets]="generateDataSets(assestatie05EventsPerDay)" [labels]="labels"></chart>
+          <div class="messageHolder">
+            <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
+          </div>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  <!--  </mat-card>-->
 </div>
