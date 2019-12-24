@@ -14,23 +14,22 @@
 
 .container {
   display: grid;
-  margin: 0 auto;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
   width: 95vw;
   height: 90vh;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 45vh 45vh;
-  grid-row-gap: 1vw;
-  grid-column-gap: 1vh;
+  grid-template: repeat(2, minmax(45vh, 45vh) )/ repeat(2, minmax(50%,50%));
+  grid-gap: 1vw 1vh;
 }
 
 .tab {
-  overflow: -moz-scrollbars-none;
   display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 80%;
+  grid-auto-flow: row;
+  grid-template: minmax(80%, 80%) / [graph] 70% [messages] 25%;
 
   .chart{
-
+    height: 100%;
   }
 
   .messageHolder {
