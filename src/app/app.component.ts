@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {DataService, DataSet, SearchObject} from './data.service';
 import {ChartData} from './chart/chart.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -11,11 +11,13 @@ import {interval} from 'rxjs';
 })
 export class AppComponent {
 
+  @ViewChild('chart', {static: false}) chart: ElementRef;
   assestatie05EventsPerDay;
   login02EventsPerDay;
   assestatie05EvetsPerDaylabels: string[];
   login02EventsperDaylabels: string[];
   login02;
+  chartsSet = false;
 
 
 
@@ -42,6 +44,7 @@ export class AppComponent {
       data: Object.values(data),
       label: 'Login attempts'
     });
+    this.setCharts();
     return dataSets;
   }
 
@@ -55,4 +58,7 @@ export class AppComponent {
     return dataSets;
   }
 
+  setCharts() {
+    return this.chartsSet = true;
+  }
 }

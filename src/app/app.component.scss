@@ -1,14 +1,22 @@
 
 .navbar {
+  background: #FAFAFA;
+
   width: 100%;
   max-width: 100%;
   justify-content: space-between;
   user-select: none;
+  height: 4rem;
   span {
     padding: 1rem;
   }
   span:hover {
     background-color: rgba(0,0,0,0.2) ;
+  }
+
+  img {
+    height: 3rem;
+    margin-top: 1rem;
   }
 
 }
@@ -21,7 +29,8 @@
   height: 90vh;
   grid-template-columns:  repeat(2, minmax(40%,40%)) 20%;
   grid-auto-rows: minmax(45vh, auto);
-  grid-gap: 1vw 1vh;
+  grid-column-gap: 20px;
+  grid-row-gap: 0;
 
   .messageHolder {
     grid-column-start: 3;
@@ -36,6 +45,8 @@
 
 .tab {
   min-height: 100%;
+  overflow: -moz-scrollbars-none;
+  overflow: hidden;
   .chart{
     height: 100%;
     grid-column: 1 ;

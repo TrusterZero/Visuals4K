@@ -10,6 +10,7 @@ mat-card {
   animation-name: incoming;
   animation-duration: 1s;
   animation-iteration-count: 1;
+  user-select: none;
 
   mat-card-subtitle {
     grid-row-start: 1;
