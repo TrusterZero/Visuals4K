@@ -1,10 +1,11 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Chart} from 'chart.js';
 import * as uuid from 'uuid/v1';
+import {interval} from "rxjs";
+import 'chartjs-plugin-colorschemes';
 
 export interface ChartData {
   data: string[];
-  borderColor: string;
   fill: boolean;
   label: string;
 }
@@ -21,18 +22,23 @@ export class ChartComponent implements AfterViewInit {
   @Input() labels: string[];
   @Input() data: any;
   canvasId = uuid();
-
   chart: Chart;
   @ViewChild('canvas', {static: false}) canvas: ElementRef;
+  private colorSchemes: string[];
 
   constructor() {
+
+    this.colorSchemes = ['brewer.RdYlGn11', 'brewer.Paired12', 'brewer.PastelTwo8', 'brewer.SetThree12'];
 
   }
 
   ngAfterViewInit() {
-    Promise.resolve(null).then(() =>  this.fillChart());
+    Promise.resolve(null).then(() => this.fillChart());
   }
 
+  public resize() {
+    this.chart.resize();
+  }
 
   private fillChart() {
     this.chart = new Chart(this.canvasId, {
@@ -42,6 +48,11 @@ export class ChartComponent implements AfterViewInit {
         datasets: this.chartDataSets
       },
       options: {
+        plugins: {
+          colorschemes: {
+            scheme: this.colorSchemes[Math.floor(Math.random() * this.colorSchemes.length)]
+          }
+        },
         legend: {
           display: true
         },
@@ -50,10 +61,11 @@ export class ChartComponent implements AfterViewInit {
             display: true
           }],
           yAxes: [{
-            display: true
+            display: true,
           }],
         },
         responsive: true,
+        maintainAspectRatio: false,
         layout: {
           padding: {
             left: 0,

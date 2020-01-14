@@ -12,6 +12,9 @@ import { MessageHolderComponent } from './message-holder/message-holder.componen
 import { MessageComponent } from './message/message.component';
 import {MatTabsModule} from '@angular/material';
 import { StatusComponent } from './status/status.component';
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatIconModule} from "@angular/material/icon";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { StatusComponent } from './status/status.component';
     MatSidenavModule,
     MatMenuModule,
     MatToolbarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatBadgeModule,
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [MatSnackBar],
   bootstrap: [AppComponent]

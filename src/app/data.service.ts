@@ -7,7 +7,7 @@ export interface DataSet {
   messages: Message[];
 }
 
-interface SearchObject {
+export interface SearchObject {
   id: string;
   data: any[];
 }
@@ -40,6 +40,18 @@ export class DataService {
     const poll = timer(5000).subscribe(() => {
       this.refreshData();
       this.startPolling();
+    });
+  }
+
+  parseLogin02() {
+    let login02 = null;
+
+    this.data.subscribe((data: DataSet) => {
+      data.searches.forEach((search: SearchObject) => {
+        if (search.id === 'login-02') {
+          login02 = search.data;
+        }
+      });
     });
   }
 

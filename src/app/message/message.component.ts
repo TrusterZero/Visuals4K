@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Message} from '../data.service';
 
 @Component({
@@ -8,9 +8,17 @@ import {Message} from '../data.service';
 })
 export class MessageComponent implements OnInit {
   @Input() message: Message;
+  @Output() remove = new EventEmitter();
+  removed = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  close() {
+    console.log( 'ran close');
+    this.remove.emit();
+    this.removed = true;
   }
 
 }

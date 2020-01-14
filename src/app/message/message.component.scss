@@ -1,0 +1,67 @@
+mat-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5px 16px 16px 16px;
+  text-align: center;
+  width: 80%;
+  height: 75px;
+  margin: 3px;
+  animation-name: incoming;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+
+  mat-card-subtitle {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin: 0;
+  }
+
+  p {
+    grid-row-start: 2;
+    grid-column: span 3;
+  }
+
+  i {
+    user-select: none;
+    grid-column: 3;
+    justify-self: end;
+    align-self: start;
+  }
+}
+
+.outgoing {
+  animation: outgoing;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes outgoing {
+  0% {
+    position: relative;
+    opacity: 1;
+    right: 0;
+    display: initial;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: -200%;
+  }
+}
+
+@keyframes incoming {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+

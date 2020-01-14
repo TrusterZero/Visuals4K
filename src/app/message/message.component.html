@@ -1,3 +1,9 @@
-<mat-card>
-  {{message.message}}
-</mat-card>
+<div [class]="removed ? 'outgoing' : ''">
+  <mat-card>
+    <i class="material-icons" (click)="close()">
+      close
+    </i>
+    <mat-card-subtitle>{{message.searchId}}</mat-card-subtitle>
+    <p>{{message.message}}</p>
+  </mat-card>
+</div>
