@@ -86,7 +86,7 @@
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="line"
+            <chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="bar"
                    [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
                    [labels]="assestatie05EvetsPerDaylabels"></chart>
           </div>

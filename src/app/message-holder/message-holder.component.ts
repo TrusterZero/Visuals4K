@@ -37,7 +37,8 @@ export class MessageHolderComponent implements OnInit {
 
   private generateRandomMessage(): Message {
     const array: string[] = ['test', 'assestatie-05'];
-    const marray: string[] = ['Alert!', 'Oops?!? \ud83d\ude14', 'Boom! \ud83d\ude21', 'Random text \t\ud83d\ude09', 'This is a test message \ud83d\ude10', 'Something went Wrong! \ud83d\ude2e', 'Oh oh!! \ud83d\ude36'];
+    // tslint:disable-next-line:max-line-length
+    const marray: string[] = ['25 accounts disabled within 24 hours', '10 phishing sites accessed within 12 hours', 'J.doe accessed his account from an unsecured location over 30 times ', 'Over 10 password resets attempted from an unsecured location'];
     const text = marray[Math.floor(Math.random() * marray.length)];
     const message = {
       messageId: '0',
