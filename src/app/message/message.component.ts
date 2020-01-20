@@ -16,7 +16,6 @@ export class MessageComponent implements OnInit {
   }
 
   close() {
-    console.log( 'ran close');
     this.remove.emit();
     this.removed = true;
   }
