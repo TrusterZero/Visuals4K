@@ -18,11 +18,14 @@ export class AppComponent {
   login02EventsperDaylabels: string[];
   login02;
   chartsSet = false;
-
+  pageIndex: number = 0;
 
 
   constructor(private dataService: DataService) {
 
+    interval(10000).subscribe(() => {
+      this.pageIndex === 0 ? this.pageIndex = 1  : this.pageIndex = 0;
+    });
 
     this.dataService.data.subscribe((dataSet: DataSet) => {
     });
