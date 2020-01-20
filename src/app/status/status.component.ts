@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {interval} from 'rxjs';
+import * as uuid from 'uuid/v1';
 
 @Component({
   selector: 'app-status',
@@ -7,11 +8,11 @@ import {interval} from 'rxjs';
   styleUrls: ['./status.component.scss']
 })
 export class StatusComponent implements OnInit {
-  colors = ['green', 'orange', 'red'];
-  @ViewChild('light', {static: false}) light: ElementRef;
+  colors = ['#22c28b', '#c28b22', '#c23b22'];
+  lightId = uuid();
   constructor() {
     interval(4000).subscribe(() => {
-      const element = document.getElementById('light').style.borderColor = this.colors[Math.floor(Math.random() * this.colors.length)]
+      document.getElementById(this.lightId).style.borderColor = this.colors[Math.floor(Math.random() * this.colors.length)];
     });
   }
 

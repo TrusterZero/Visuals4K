@@ -70,11 +70,15 @@ mat-icon {
   width: 90%;
 }
 
+//app-status {
+//  padding: 10px;
+//  justify-self: end;
+//}
+
 app-status {
   position: absolute;
-  right: 30px;
-  top: -3vh;
-  z-index: 100000;
+  top: 20px;
+  right: 20px;
 }
 
 .card {

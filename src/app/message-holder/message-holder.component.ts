@@ -22,7 +22,7 @@ export class MessageHolderComponent implements OnInit {
     //     //   });
     //     // });
 
-    interval(8000).subscribe(() => {
+    interval(20000).subscribe(() => {
       this.addRandomMessages();
     });
   }
@@ -46,7 +46,7 @@ export class MessageHolderComponent implements OnInit {
       message: text,
     };
     this.snackBar.dismiss();
-    this.snackBar.open(text, 'close');
+    // this.snackBar.open(text, 'close');
 
     return message;
   }
