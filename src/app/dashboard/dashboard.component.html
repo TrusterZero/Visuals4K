@@ -1,20 +1,13 @@
 <div class="container">
-  <mat-card class="card">
-    <mat-tab-group animationDuration="1500ms">
+  <mat-card class='card'>
+    <mat-tab-group animationDuration="2000ms"[selectedIndex]="pageIndex">
       <mat-tab label="assestatie-05">
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              #chart
-              class="chart"
-              *ngIf="assestatie05EvetsPerDaylabels"
-              chartType="line"
-              [chartDataSets]="
-                generateAssestatieDataSets(assestatie05EventsPerDay)
-              "
-              [labels]="assestatie05EvetsPerDaylabels"
-            ></chart>
+            <chart #chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="line"
+                   [chartDataSets]="generateAssestatieDataSets(assestatie05EventsPerDay)"
+                   [labels]="assestatie05EvetsPerDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
@@ -22,32 +15,22 @@
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="login02EventsperDaylabels"
-              chartType="line"
-              [chartDataSets]="generateDataSets(login02EventsPerDay)"
-              [labels]="login02EventsperDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="login02EventsperDaylabels" chartType="line"
+                   [chartDataSets]="generateDataSets(login02EventsPerDay)" [labels]="login02EventsperDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
+    <app-status></app-status>
   </mat-card>
-  <mat-card class="card">
-    <mat-tab-group animationDuration="1500ms">
-      <app-status></app-status>
+  <mat-card class='card'>
+    <mat-tab-group animationDuration="2000ms"[selectedIndex]="pageIndex">animationDuration="2000ms">
       <mat-tab label="assestatie-05">
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="login02EventsperDaylabels"
-              chartType="line"
-              [chartDataSets]="generateDataSets(login02EventsPerDay)"
-              [labels]="login02EventsperDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="login02EventsperDaylabels" chartType="line"
+                   [chartDataSets]="generateDataSets(login02EventsPerDay)" [labels]="login02EventsperDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
@@ -55,32 +38,23 @@
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="assestatie05EvetsPerDaylabels"
-              chartType="line"
-              [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
-              [labels]="assestatie05EvetsPerDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="line"
+                   [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
+                   [labels]="assestatie05EvetsPerDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
+    <app-status></app-status>
   </mat-card>
-  <mat-card class="card">
-    <mat-tab-group animationDuration="1500ms">
-      <app-status></app-status>
+  <mat-card class='card'>
+    <mat-tab-group animationDuration="2000ms"[selectedIndex]="pageIndex">animationDuration="2000ms">
       <mat-tab label="assestatie-05">
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="login02EventsperDaylabels"
-              chartType="pie"
-              [chartDataSets]="generateDataSets(login02EventsPerDay)"
-              [labels]="login02EventsperDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="login02EventsperDaylabels" chartType="pie"
+                   [chartDataSets]="generateDataSets(login02EventsPerDay)" [labels]="login02EventsperDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
@@ -88,31 +62,24 @@
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="assestatie05EvetsPerDaylabels"
-              chartType="line"
-              [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
-              [labels]="assestatie05EvetsPerDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="line"
+                   [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
+                   [labels]="assestatie05EvetsPerDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
+    <app-status></app-status>
   </mat-card>
-  <mat-card class="card">
-    <mat-tab-group animationDuration="1500ms">
+  <mat-card class='card'>
+    <mat-tab-group animationDuration="2000ms"[selectedIndex]="pageIndex">animationDuration="2000ms">
       <mat-tab label="assestatie-05">
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="assestatie05EvetsPerDaylabels"
-              chartType="bar"
-              [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
-              [labels]="assestatie05EvetsPerDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="assestatie05EvetsPerDaylabels" chartType="bar"
+                   [chartDataSets]="generateDataSets(assestatie05EventsPerDay)"
+                   [labels]="assestatie05EvetsPerDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
@@ -120,21 +87,13 @@
         <ng-template matTabContent>
           <div class="tab">
             <mat-spinner *ngIf="!chartsSet"></mat-spinner>
-            <chart
-              class="chart"
-              *ngIf="login02EventsperDaylabels"
-              chartType="line"
-              [chartDataSets]="generateDataSets(login02EventsPerDay)"
-              [labels]="login02EventsperDaylabels"
-            ></chart>
+            <chart class="chart" *ngIf="login02EventsperDaylabels" chartType="line"
+                   [chartDataSets]="generateDataSets(login02EventsPerDay)" [labels]="login02EventsperDaylabels"></chart>
           </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
+    <app-status></app-status>
   </mat-card>
-  <!--  <mat-icon matBadge="22" matBadgePosition="above after">message</mat-icon>-->
-  <app-message-holder
-    class="messageHolder"
-    searchId="assestatie-05"
-  ></app-message-holder>
+  <app-message-holder class="messageHolder" searchId="assestatie-05"></app-message-holder>
 </div>
