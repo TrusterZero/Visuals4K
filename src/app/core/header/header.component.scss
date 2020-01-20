@@ -1,0 +1,33 @@
+@import 'config';
+
+$header-padding: 15px;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: $color-white;
+  height: $header-height;
+  align-items: center;
+  box-shadow: 0 0 10px 1px rgba(68, 102, 242, 0.05);
+  z-index: 10;
+
+  &__logo {
+    width: $sidebar-width;
+    padding: $header-padding;
+    height: 100%;
+
+    img {
+      max-height: ($header-height - ($header-padding * 2));
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__inner {
+    flex-grow: 1;
+    padding: 0 30px;
+  }
+}

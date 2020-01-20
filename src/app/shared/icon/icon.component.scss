@@ -1,0 +1,21 @@
+@import 'config';
+
+.material-icons {
+  display: block;
+
+  &--light {
+    color: $color-white;
+  }
+
+  &--small {
+    font-size: 18px;
+  }
+
+  &--large {
+    font-size: 36px;
+  }
+
+  &--xlarge {
+    font-size: 48px;
+  }
+}

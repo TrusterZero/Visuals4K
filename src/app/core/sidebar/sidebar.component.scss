@@ -1,0 +1,12 @@
+@import 'config';
+
+.sidebar {
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  height: 100%;
+  width: $sidebar-width;
+  padding: 20px 0;
+  background-color: $color-primary;
+  z-index: 10;
+}
