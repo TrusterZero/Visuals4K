@@ -1,20 +1,23 @@
 $color-primary: #353943;
 $color-secondary: #474c59;
-$color-tertiary: #e95f4c;
 
 $color-gray: #f1f2f3;
 $color-black: $color-primary;
 $color-white: #fff;
 
-$font-family: 'Work Sans', sans-serif;
+$color-success: #22af47;
+$color-warning: #ff9f40;
+$color-danger: #ff5370;
+
+$font-family: 'Lato', sans-serif;
 
 $font-size-small: 14px;
 $font-size-normal: 16px;
+$font-size-large: 18px;
 
 $font-weight-normal: 400;
-$font-weight-semi: 600;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$font-weight-semi: 700;
+$font-weight-bold: 900;
 
 $header-height: 60px;
 $sidebar-width: 255px;

@@ -4,7 +4,6 @@ import { DashboardComponent } from './dashboard.component';
 import { ChartComponent } from '../chart/chart.component';
 import { MessageHolderComponent } from '../message-holder/message-holder.component';
 import { MessageComponent } from '../message/message.component';
-import { StatusComponent } from '../status/status.component';
 import {
   MatCardModule,
   MatSnackBarModule,
@@ -19,6 +18,7 @@ import {
   MatSnackBar
 } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 const moduleRoutes: Routes = [
   {
@@ -32,12 +32,12 @@ const moduleRoutes: Routes = [
     DashboardComponent,
     ChartComponent,
     MessageHolderComponent,
-    MessageComponent,
-    StatusComponent
+    MessageComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(moduleRoutes),
+    SharedModule,
     MatCardModule,
     MatSnackBarModule,
     MatTabsModule,

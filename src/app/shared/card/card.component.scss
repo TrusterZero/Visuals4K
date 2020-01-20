@@ -1,0 +1,36 @@
+@import 'config';
+
+$card-padding: 30px;
+
+.card {
+  background-color: $color-white;
+  border-radius: 8px;
+  box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
+  min-height: 100%;
+
+  &__header {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    padding: 15px $card-padding;
+    border-bottom: 1px solid $color-gray;
+  }
+
+  &__status {
+    margin-left: auto;
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    padding: 15px $card-padding;
+
+    &::ng-deep .mat-tab-group {
+      height: 100%;
+    }
+  }
+}
