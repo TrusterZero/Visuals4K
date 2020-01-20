@@ -1,7 +1,6 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {Chart} from 'chart.js';
 import * as uuid from 'uuid/v1';
-import {interval} from "rxjs";
 import 'chartjs-plugin-colorschemes';
 
 export interface ChartData {

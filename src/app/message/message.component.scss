@@ -7,7 +7,7 @@ mat-card {
   width: 80%;
   height: 75px;
   margin: 3px;
-  animation-name: incoming;
+  animation-name: opening;
   animation-duration: 1s;
   animation-iteration-count: 1;
   user-select: none;
@@ -31,14 +31,14 @@ mat-card {
   }
 }
 
-.outgoing {
-  animation: outgoing;
+.closing {
+  animation: closing;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes outgoing {
+@keyframes closing {
   0% {
     position: relative;
     opacity: 1;
@@ -55,7 +55,7 @@ mat-card {
   }
 }
 
-@keyframes incoming {
+@keyframes opening {
   from {
     margin-top: 200px;
     opacity: 0;
