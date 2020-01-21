@@ -50,6 +50,6 @@ const moduleRoutes: Routes = [
     MatProgressSpinnerModule
   ],
   providers: [MatSnackBar],
-  exports: [DashboardComponent]
+  exports: [DashboardComponent, StatusComponent, ChartComponent]
 })
 export class DashboardModule {}

@@ -1,11 +1,17 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import {SingleSearchComponent} from "./single-search/single-search.component";
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    pathMatch: 'full',
+  },
+  {
+    path: 'graph/:searchId',
+    component: SingleSearchComponent,
     pathMatch: 'full'
   }
 ];
@@ -18,4 +24,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

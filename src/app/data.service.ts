@@ -37,7 +37,7 @@ export class DataService {
   }
 
   private startPolling() {
-    const poll = timer(5000).subscribe(() => {
+    const poll = timer(1000).subscribe(() => {
       this.refreshData();
       this.startPolling();
     });
