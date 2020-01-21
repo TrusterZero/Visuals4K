@@ -1,11 +1,23 @@
 <div class="card">
   <div class="card__header" *ngIf="title">
     <div class="card__title">{{ title }}</div>
-    <div class="card__status">
-      <app-status></app-status>
+    <div class="card__status" *ngIf="status">
+      <app-status [currentStatus]="status"></app-status>
     </div>
   </div>
+  <ng-container *ngIf="!scrollable; then notScrollable; else isScrollable">
+  </ng-container>
+</div>
+
+<ng-template #notScrollable>
   <div class="card__content">
     <ng-content></ng-content>
   </div>
-</div>
+</ng-template>
+<ng-template #isScrollable>
+  <div class="card__content card__content--scroll">
+    <div class="card__scroll">
+      <ng-content select="[scrollable-content]"></ng-content>
+    </div>
+  </div>
+</ng-template>

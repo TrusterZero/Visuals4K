@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Status } from './status.enums';
 
 @Component({
@@ -12,7 +12,7 @@ export class StatusComponent implements OnInit {
     Status.Warning,
     Status.Success
   ];
-  currentStatus: Status;
+  @Input() currentStatus: Status;
 
   ngOnInit() {
     this.currentStatus = this.random();

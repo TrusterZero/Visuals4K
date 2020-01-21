@@ -2,23 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { ChartComponent } from '../chart/chart.component';
-import { MessageHolderComponent } from '../message-holder/message-holder.component';
-import { MessageComponent } from '../message/message.component';
 import {
   MatCardModule,
   MatSnackBarModule,
   MatTabsModule,
-  MatSidenavModule,
-  MatMenuModule,
-  MatToolbarModule,
   MatButtonToggleModule,
-  MatBadgeModule,
-  MatIconModule,
   MatProgressSpinnerModule,
   MatSnackBar
 } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { MessagesModule } from '../messages/messages.module';
 
 const moduleRoutes: Routes = [
   {
@@ -28,25 +22,16 @@ const moduleRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    ChartComponent,
-    MessageHolderComponent,
-    MessageComponent
-  ],
+  declarations: [DashboardComponent, ChartComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(moduleRoutes),
     SharedModule,
+    MessagesModule,
     MatCardModule,
-    MatSnackBarModule,
     MatTabsModule,
-    MatSidenavModule,
-    MatMenuModule,
-    MatToolbarModule,
     MatButtonToggleModule,
-    MatBadgeModule,
-    MatIconModule,
+    MatSnackBarModule,
     MatProgressSpinnerModule
   ],
   providers: [MatSnackBar],

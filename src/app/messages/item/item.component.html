@@ -1,0 +1,13 @@
+<div class="message-item">
+  <div class="message-item__top">
+    <app-icon name="notifications" class="message-item__category"></app-icon>
+    <div class="message-item__type">{{ message.type }}</div>
+    <app-icon
+      name="delete_outline"
+      size="small"
+      class="message-item__delete"
+      (click)="remove.emit(message.id)"
+    ></app-icon>
+  </div>
+  <div class="message-item__content">{{ message.message }}</div>
+</div>
