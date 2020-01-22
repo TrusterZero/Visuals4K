@@ -1,0 +1,10 @@
+.messages {
+  &__item {
+    display: block;
+    margin-top: 15px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

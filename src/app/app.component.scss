@@ -6,7 +6,7 @@
   grid-template-columns: $sidebar-width auto;
   grid-template-areas:
     'header header'
-    'sidebar main';
+    'main main';
 
   &__header {
     grid-area: header;

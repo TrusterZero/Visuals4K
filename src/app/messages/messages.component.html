@@ -1,0 +1,8 @@
+<div class="messages">
+  <app-message-item
+    class="messages__item"
+    *ngFor="let message of activeMessages"
+    [message]="message"
+    (remove)="removeMessage($event)"
+  ></app-message-item>
+</div>

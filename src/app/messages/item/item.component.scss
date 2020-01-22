@@ -1,0 +1,48 @@
+@import 'config';
+
+.message-item {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    position: relative;
+    width: 100%;
+    padding-left: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__type {
+    font-weight: $font-weight-bold;
+  }
+
+  &__delete {
+    margin-left: auto;
+    color: $color-secondary;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    font-size: $font-size-small;
+    color: $color-secondary;
+    margin-top: 5px;
+    padding: 5px 0 5px 40px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12px;
+      bottom: 0;
+      width: 2px;
+      background-color: $color-gray;
+    }
+  }
+}
